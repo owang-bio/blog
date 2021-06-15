@@ -57,5 +57,5 @@ enableemoji = false
     
     [[menu.main]]
         name = "Author"
-        url = "/authorr/"
+        url = "/author/"
         weight = 3
