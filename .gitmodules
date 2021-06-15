@@ -4,3 +4,6 @@
 [submodule "public"]
 	path = public
 	url = https://github.com/owang-bio/ouwang.io.git
+[submodule "themes/ramium"]
+	path = themes/ramium
+	url = https://github.com/rafed/ramium.git
