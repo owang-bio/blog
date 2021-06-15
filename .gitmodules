@@ -1,7 +1,0 @@
-[submodule "themes/ananke"]
-	path = themes/ananke
-	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
-[submodule "ouwang.io"]
-	path = ouwang.io
-	url = https://github.com/owang-bio/ouwang.io.git
-	branch = main
