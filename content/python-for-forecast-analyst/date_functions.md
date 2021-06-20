@@ -1,22 +1,24 @@
 ---
-title: "Date Functions - Part 1"
+title: "Python datetime module"
 date: 2021-06-15T23:58:51-06:00
 draft: false
 tags: ['python', 'datetime']
-description: Some useful date functions in Python
+description: Date functions in Python - Part 1
 ---
 
-As a forecast analyst, I am dealing with time series data every day. So, the first Python module I want to mention is Python datetime which provides basic classes for dates and time manipulation. 
+As a forecast analyst, I am dealing with time series data every day. So, the first Python module I want to mention is datetime which provides basic classes for dates and time manipulation. 
 
-For my current job, although I am helping several international markets, most of the time I don't need to worry about time zone or dailylight saving time, etc. If you are interested in the datetime type that include such information, you can learn more about it from the [documentation](https://docs.python.org/3/library/datetime.html#date-objects).
+For my current job, although I am helping several international markets, most of the time I don't need to worry about time zone or daylight saving time, etc. If you are interested in the datetime type that include such information, you can learn more about it from the [documentation](https://docs.python.org/3/library/datetime.html#date-objects).
 
-In this post, I will introduce several classes in this module and class methods that I use the most frequently. Then, my next post will explain the use case for them. 
+In this post, I will introduce several classes in this module and class methods that I use the most frequently. Then, my next post will explain the use case for some of them. 
 
 Of course, to use this module, we first need to import it:
 ```
 import datetime
 ```
 <p>&nbsp;</p>
+
+### **datetime()**
 
 One useful class in datetime module is datetime(). When instantiating, the arguments, year, month and day are required, and the others are optional:
 ```
@@ -50,6 +52,7 @@ will return:
 ```
 <p>&nbsp;</p>
 
+### **date()**
 Another class that I use frequently is date(). It is very similar to datetime() class, but when we instantiate it, it only takes three arguments: year, month, day. They way to access it's attribute is the same as that of datetime objects. 
 For example:
 ```
@@ -63,15 +66,28 @@ datetime.date.today()
 ```
 <p>&nbsp;</p>
 
-Sometime we need to convert date/datetime objects into string format or _vice versa_, which is when strftime() and strptime() come in handy.
-
-datetime and date objects have a strftime() method that converts them into string, in a format that we can specify. 
+### **strftime()** and **strptime()**
+Sometime we need to convert date/datetime objects into string format or _vice versa_, which is when strftime() and strptime() come in handy. date/datetime objects have a strftime() method that converts them into strings, in a format that we can specify. 
 For example:
 ```
 dt = datetime.date(2021, 6, 1) #create a date object
 dt.strftime('%Y-%m-%d') #convert the date to string
 ```
-will convert the date to "2021-06-01" in string type. "%Y", "%m", and "%d" are called format Codes. [Here](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior) are more information about different format code that you can use to format your date in string. If we want the date string in the format of "Jun-01-21", we can use format code of "%B-%d-%y":
+will convert the date to "2021-06-01" in string type. "%Y", "%m", and "%d" are format codes. For example, with "%Y" you are telling the strftime() to convert the year into format of "2021". You can read more details about the format codes [here](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior). If we want the date string in the format of "June-01-21", we can use format code of "%B-%d-%y":
 ```
 dt.strftime(format="%B-%d-%y")
 ```
+
+strptime() is a class method of datetime module's datetime class. So, to use this method, you need to call:
+```
+datetime.datetime.strptime(datetime_in_str, '%Y-%m-%d')
+```
+for example:
+```
+datetime.datetime.strptime('2021-06-20', '%Y-%m-%d')
+```
+will return the following datetime object:
+```
+datetime.datetime(2021, 6, 20, 0, 0)
+```
+One thing to remember is that strptime() does not take keyword arguments, which means we need to provide the date in string format as the first argument, and the format code as the second argument, and we don't give any names to the arguments like we did for strftime (e.g. dt.strftime(**format**="%B-%d-%y")).
