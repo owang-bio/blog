@@ -8,9 +8,10 @@ description: Date functions in Python - Part 1
 
 As a forecast analyst, I am dealing with time series data every day. So, the first Python module I want to mention is datetime which provides basic classes for dates and time manipulation. 
 
-For my current job, although I am helping several international markets, most of the time I don't need to worry about time zone or daylight saving time, etc. If you are interested in the datetime type that include such information, you can learn more about it from the [documentation](https://docs.python.org/3/library/datetime.html#date-objects).
+I am helping several international markets with forecasting, most of the time I don't need to worry about time zone or daylight saving time, etc. If you are interested in the datetime type that include such information, you can learn more about it from the [documentation](https://docs.python.org/3/library/datetime.html#date-objects).
 
-In this post, I will introduce several classes in this module and class methods that I use the most frequently. Then, my next post will explain the use case for some of them. 
+In this post, I will introduce several basic classes and class methods in datetime module that I use the most frequently. Later, we will revisit these classes and methods in my future posts explaining how I use them in my work. 
+<p>&nbsp;</p>
 
 Of course, to use this module, we first need to import it:
 ```
