@@ -6,7 +6,7 @@ tags: ['Python', 'dateutil']
 description: Date functions in Python - Part 2
 ---
 
-When we need to do any operations between two date/datetime objects, for example, addition or subtraction, we will need datedelta/timedelta. Unfortunately, the timedelta class included in datetime module has limited functions (in case you are interested, [documentation](https://docs.python.org/3/library/datetime.html#timedelta-objects)). Python Numpy and Pandas have datedelta/timedelta objects, but I found that dateutil is more intuitive. Although dateutil has many powerful functions, I will only introduce one function that I use the most frequently.
+When we need to do any operations between two date/datetime objects, for example, addition or subtraction, we will need datedelta/timedelta. Unfortunately, the timedelta class included in datetime module has limited functions (in case you are interested: [documentation](https://docs.python.org/3/library/datetime.html#timedelta-objects)). Python Numpy and Pandas have datedelta/timedelta objects, but I found that dateutil is more intuitive. Although dateutil has many powerful functions, I will only introduce one function that I use the most frequently.
 <p>&nbsp;</p>
 
 **relativedelta()**
@@ -28,27 +28,29 @@ It might work better if I use an example to explain how it works:
 ```
 import datetime 
 from dateutil import relativedelta # import relativedelta
-dt = datetime.date(2021, 6, 1) # create date object
-delta = relativedelta.relativedelta(months=+1) # create datedelta
+
+dt = datetime.date(2021, 6, 1) # create date object: 2021-06-01
+delta = relativedelta.relativedelta(months=+1) # create datedelta: +1
 print(dt + delta) # add the delta to the date
 ```
 The output is:
 ```
 2021-07-01
 ```
-The original date is 2021-06-01, and we are adding 1 month to it so the output is 2021-07-01. If we want to subtract 1 month from it, we use the argument **months to -1** (months=-1). The python code would be:
+The original date is 2021-06-01, and we are adding 1 month to it so the output is 2021-07-01. If we want to subtract 1 month from it, we set the argument **months to -1** (months=-1). The python code would be:
 ```
 import datetime
 from dateutil import relativedelta # import relativedelta
-dt = datetime.date(2021, 6, 1) # create date object
-delta = relativedelta.relativedelta(months=-1) # create datedelta
+
+dt = datetime.date(2021, 6, 1) # create date object: 2021-06-01
+delta = relativedelta.relativedelta(months=-1) # create datedelta: -1
 print(dt + delta) # add the delta to the date
 ```
 And the output would be:
 ```
 2021-05-01
 ```
-We can simply make any combination of arguments of "years", "weeks", and "days"... to create the timedelta that we need.
+We can simply make any combination of arguments of "years", "weeks", and "days"... to create the datetimedelta that we need.
 
 I use datedelta/timedelta pretty much in all my Python scripts if there is a need of relative dates. One example is:
 ```
@@ -63,4 +65,4 @@ current_month = datetime.date(today.year, today.month, 1)
 delta = relativedelta.relativedelta(months=-6) # create delta, -6 months
 six_month_ago = current_month + delta # get the date of 6 month ago relative to current month
 ```
-In this way, every time I run this script, I can always get the date of six month ago relative to current month, without the need to do any calculation and type in the date manually.
+In this way, every time I run this script, I can always get the date of six month ago relative to current month, without the need to do any calculation or type in the date manually.
