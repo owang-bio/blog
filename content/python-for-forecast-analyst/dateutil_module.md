@@ -6,7 +6,8 @@ tags: ['Python', 'dateutil']
 description: Date functions in Python - Part 2
 ---
 
-When we need to do any operations between two date/datetime objects, for example, addition or subtraction, we will need datedelta/timedelta. Unfortunately, the timedelta class included in datetime module has limited functions (in case you are interested: [documentation](https://docs.python.org/3/library/datetime.html#timedelta-objects)). Python Numpy and Pandas have datedelta/timedelta objects, but I found that dateutil is more intuitive. Although dateutil has many powerful functions, I will only introduce one function, the relativedelta(), that I use the most frequently.
+When we need to do any operations between two date/datetime objects, for example, addition or subtraction, we will need datedelta/timedelta. Unfortunately, the timedelta class included in datetime module has limited functions (in case you are interested: [documentation](https://docs.python.org/3/library/datetime.html#timedelta-objects)). Python Numpy and Pandas have datedelta/timedelta objects, but if we are dealing with single datetime object, I found that dateutil is more intuitive. Although dateutil has many powerful functions, I will only introduce one function, the relativedelta(), which I use the most frequently. 
+In the future, I will write another post about Pandas's date/timedelta. 
 <p>&nbsp;</p>
 
 **relativedelta()**
@@ -22,7 +23,7 @@ The second way:
 relativedelta(arg1=x,arg2=y,arg3=z...)
 ```
 
-I use the second way more often then the first way. Here is the [huge list of arguments](https://dateutil.readthedocs.io/en/stable/relativedelta.html) that we can provide to relativedelta(). I use "years", "months", "weeks", and "days" more frequently than the others. Notice, **they are all plural**, and their singular form has different meanings to this function.
+I use the second way more often than the first way. Here is the [huge list of arguments](https://dateutil.readthedocs.io/en/stable/relativedelta.html) that we can provide to relativedelta(). I use "years", "months", "weeks", and "days" more frequently than the others. Notice, **they are all plural**, and their singular form has different meanings to this function.
 
 It might work better if I use an example to explain how it works:
 ```
@@ -83,6 +84,6 @@ delta = relativedelta.relativedelta(months=-6)
 # get the date of 6 month ago relative to current month
 six_month_ago = current_month + delta
 ```
-In this way, every time I run this script, I can always get the date of six month ago relative to current month, without the need to do any calculation or type in the date manually. It can also be helpful when you connect to database server with Python and need to composite SQL queries that involves relative dates.
+In this way, every time I run this script, I can always get the date of six month ago relative to current month, without the need to do any calculation or type in the date manually. It can also be helpful when you connect to database server with Python and need to write SQL queries that involves relative dates.
 
 That's it for relativedelta() in dateutil module. Hope you find it useful! 

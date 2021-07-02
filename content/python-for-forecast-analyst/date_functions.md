@@ -92,3 +92,5 @@ will return the following datetime object:
 datetime.datetime(2021, 6, 20, 0, 0)
 ```
 One thing to remember is that strptime() does not take keyword arguments, which means we need to provide the date in string format as the first argument, and the format code as the second argument, and we don't give any names to the arguments like we did for strftime (e.g. dt.strftime(**format**="%B-%d-%y")).
+
+That's it for the datetime module from me. Hope you it is helpful to some of you!
