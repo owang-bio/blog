@@ -6,9 +6,9 @@ tags: ['python', 'datetime']
 description: Date functions in Python - Part 1
 ---
 
-As a forecast analyst, I am dealing with time series data every day. So, the first Python module I want to mention is datetime which provides basic classes for dates and time manipulation. 
+I am dealing with time series data every day. So, the first Python module I want to mention is datetime which provides basic classes for dates and time manipulation. 
 
-I am helping several international markets with forecasting, most of the time I don't need to worry about time zone or daylight saving time, etc. If you are interested in the datetime type that include such information, you can learn more about it from the [documentation](https://docs.python.org/3/library/datetime.html#date-objects).
+I am helping several international markets with forecasting, but most of the time I don't need to worry about time zone or daylight saving time, etc. If you are interested in the datetime type that include such information, you can learn more about it from the [documentation](https://docs.python.org/3/library/datetime.html#date-objects).
 
 In this post, I will introduce several basic classes and class methods in datetime module that I use the most frequently. Later, we will revisit these classes and methods in my future posts explaining how I use them in my work. 
 <p>&nbsp;</p>
@@ -79,7 +79,7 @@ will convert the date to "2021-06-01" in string type. "%Y", "%m", and "%d" are f
 dt.strftime(format="%B-%d-%y")
 ```
 
-strptime() is a class method of datetime module's datetime class. So, to use this method, you need to call:
+strptime() is a class method of datetime objects. So, to use this method, you need to call:
 ```
 datetime.datetime.strptime(datetime_in_str, '%Y-%m-%d')
 ```
