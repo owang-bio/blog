@@ -3,7 +3,7 @@ title: "Python dateutil module"
 date: 2021-06-20T19:57:25-06:00
 draft: false
 tags: ['Python', 'dateutil']
-description: Date functions in Python - Part 2
+description: relativedelta() in dateutil module
 ---
 
 When we need to do any operations between two date/datetime objects, for example, addition or subtraction, we will need datedelta/timedelta. Unfortunately, the timedelta class included in datetime module has limited functions (in case you are interested: [documentation](https://docs.python.org/3/library/datetime.html#timedelta-objects)). Python Numpy and Pandas have datedelta/timedelta objects, but if we are dealing with single datetime object, I found that dateutil is more intuitive. Although dateutil has many powerful functions, I will only introduce one function, the relativedelta(), which I use the most frequently. 

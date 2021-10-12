@@ -3,14 +3,14 @@ title: "Python datetime module"
 date: 2021-06-15T23:58:51-06:00
 draft: false
 tags: ['python', 'datetime']
-description: Date functions in Python - Part 1
+description: datetime module, strftime() and strptime()
 ---
 
 I am dealing with time series data every day. So, the first Python module I want to mention is datetime which provides basic classes for dates and time manipulation. 
 
 I am helping several international markets with forecasting, but most of the time I don't need to worry about time zone or daylight saving time, etc. If you are interested in the datetime type that include such information, you can learn more about it from the [documentation](https://docs.python.org/3/library/datetime.html#date-objects).
 
-In this post, I will introduce several basic classes and class methods in datetime module that I use the most frequently. Later, we will revisit these classes and methods in my future posts explaining how I use them in my work. 
+In this post, I will introduce several basic classes and class methods in datetime module that I use the most frequently. 
 <p>&nbsp;</p>
 
 Of course, to use this module, we first need to import it:

@@ -5,7 +5,7 @@ baseURL = "https://owang-bio.github.io/ouwang.io/"
 languageCode = "en-us"
 theme = "ramium"
 
-title = "Forecast Analyst's Blog"
+title = "Data Analyst's Blog"
 
 googleAnalytics = "analytics-code"
 pluralizeListTitles = false
