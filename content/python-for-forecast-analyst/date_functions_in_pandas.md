@@ -41,13 +41,13 @@ pd.Timestamp('2021-10-12 06:33:30.793655').normalize()
 ```
 3. **replace()** will replace the date/time part, for example:
 ```
-pd.Timestamp("2018/01/05").normalize().replace(month=9)
+pd.Timestamp("2018/01/05").replace(month=9)
 ```
 replace the month from January to September and return Timestamp('2018-09-05 00:00:00')
 ```
 pd.Timestamp('2021-10-12 06:33:30.793655').replace(second=0)
 ```
-will replace day from 30 to 0 and return Timestamp('2021-10-12 06:33:00.793655').
+will replace second from 30 to 0 and return Timestamp('2021-10-12 06:33:00.793655').
 
 <p>&nbsp;</p>
 
