@@ -2,7 +2,7 @@
 title: "Python dateutil module"
 date: 2021-06-20T19:57:25-06:00
 draft: false
-tags: ['Python', 'dateutil']
+tags: ['Python', 'datetime', 'timedelta']
 description: relativedelta() in dateutil module
 ---
 
