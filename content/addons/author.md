@@ -12,4 +12,4 @@ I am John Doe and currently working as a data & forecast analyst. I have been le
 
 I have interesting background. I have a PhD focusing on Functional Genomics, which is how I became fascinated by data. I then decided to get another master's degree in Information Systems because I wanted to learn more about data analytics. I landed a job as data & forecast analyst because of this master's degree.
 
-I am using Python and Excel every day in my work. So, this blog will be focusing on data analytics using Python and Excel. I may also include some SQL and techniques for data visualization.
+I am using Python and Excel every day in my work. So, this blog will be focusing on data analytics using Python and maybe some Excel. I may also include some SQL and techniques for data visualization.
