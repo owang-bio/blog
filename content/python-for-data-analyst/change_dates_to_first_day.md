@@ -1,9 +1,9 @@
 ---
-title: "Date to beginning of Month"
+title: "Date to beginning of a Month"
 date: 2021-10-13T22:45:50-06:00
 draft: False
 tags: ['python', 'pandas', 'datetime']
-description: change a Pandas Series of dates to the first day of each month
+description: Change a Pandas Series of dates to the first day of each month
 ---
 
 Pandas.Timestamp.replace(day=1) can change a single Timestamp to the beginning of a month. But when we have a Series of date or a date column, this method will no longer work. I have to do 
@@ -62,11 +62,14 @@ will return:
 | 2021-01-01 |
 
 ### **Method 3. Change to Pandas's datetime Span and change it back to Timestamp**
-Pandas's datetime span deserve a separated post, and if you haven't read it yet [click here](#).
+Pandas's datetime span deserve a separated post, and if you haven't read it yet [click here]({{< ref "/python-for-data-analyst/pandas_time_span.md" >}}).
 
 The following code changes Timestamps to Pandas's datetime span and then change it back to Timestamp
 ```
-date_df['Dates'].dt.to_period('M').dt.to_timestamp('ms')
+(
+    date_df['Dates'].dt.to_period('M')
+        .dt.to_timestamp('ms')
+)
 ```
 Specifically, to_period('M') changes the dates to month span, and to_timestamp('ms') converts the spans back to Timestamps. Now we have:
 | Dates      |
