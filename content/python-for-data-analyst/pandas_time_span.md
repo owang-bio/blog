@@ -2,7 +2,7 @@
 title: "Pandas Time Span"
 date: 2021-10-22T00:50:03-06:00
 draft: False
-tags: ['Python', 'datetime', 'period']
+tags: ['Python', 'pandas', 'datetime', 'period']
 description: Time span objects in Pandas
 ---
 
@@ -12,7 +12,7 @@ To create a time span object, we can use Period() method:
 ```
 pd.Period()
 ```
-The keyword argument **freq** specify the span of the time. A list of valid input for **freq** argument can be find [here](https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#offset-aliases), which are called Offset aliases. Not sure why Pandas documentation for time span did not mention **freq** takes offset aliases. I think it might be helpful to go through the list of the Offset aliases if you are going to deal with Pandas time span. 
+The keyword argument **freq** specify the span of the time. A list of valid input for **freq** argument can be find [here](https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#offset-aliases), which are called Offset aliases. Not sure why Pandas documentation for time span did not mention that **freq** takes offset aliases. I think it might be helpful to go through the list of the Offset aliases if you are going to deal with Pandas time span. 
 
 Pandas can infer the time span if freq argument is not provided. For example:
 ```
