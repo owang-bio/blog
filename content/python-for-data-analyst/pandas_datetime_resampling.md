@@ -1,5 +1,5 @@
 ---
-title: "Pandas Datetime Resampling"
+title: "Pandas Datetime Resampling - Part 1"
 date: 2021-10-24T00:50:45-06:00
 draft: False
 tags: ['Python', 'pandas', 'datetime']
