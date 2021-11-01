@@ -2,7 +2,7 @@
 title: "Pandas where() vs Numpy.where()"
 date: 2021-10-29T00:44:08-06:00
 draft: true
-tags: ['Python', 'pandas', 'numpy', 'where']
+tags: ['Python', 'pandas', 'numpy']
 description: Difference between pandas where() and numpy.where(), also introduction of pandas mask()
 --- 
 
@@ -117,4 +117,4 @@ will return a DataFrame with 3 columns:
     </tr>
   </tbody>
 </table>
-That's all about the difference between Pandas and Numpy where(). When you are changing the original values even the condition is met, I would recomand using numpy.where()
+That's all about the difference between Pandas and Numpy where(). When you are trying to change the original values when the condition is met, I would recommend using numpy.where(). Otherwise, we can use Pandas where()/mask().
