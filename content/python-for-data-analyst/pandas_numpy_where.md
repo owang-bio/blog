@@ -1,7 +1,7 @@
 ---
 title: "Pandas where() vs Numpy.where()"
 date: 2021-10-29T00:44:08-06:00
-draft: true
+draft: False
 tags: ['Python', 'pandas', 'numpy']
 description: Difference between pandas where() and numpy.where(), also introduction of pandas mask()
 --- 
