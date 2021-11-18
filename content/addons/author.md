@@ -8,7 +8,7 @@ url: "/author/"
 # image: "/image/profile.png"
 ---
 
-My name is Ou Wang, and I am currently working as a data & forecast analyst. I have been learning data analytics every day and taking notes using Microsoft OneNote. I think it would be interesting if I make my notes public, which is why I am creating this blog. I will spend a couple of minutes everyday and write about something I have learned every day. Hope some of my blogs can be helpful to some of the data people.
+My name is Ou Wang, and I am currently working as a data & forecast analyst. I have been learning data analytics every day and taking notes using Microsoft OneNote. I think it would be interesting if I make my notes public, which is why I am creating this blog. I will spend a couple of minutes everyday and write about something I have learned. Hope some of my blogs can be helpful to some of the data people.
 
 I have interesting background. I have a PhD focusing on Functional Genomics, which is how I became fascinated by data. I then decided to get another master's degree in Information Systems because I wanted to learn more about data analytics. I landed a job as data & forecast analyst because of this master's degree.
 

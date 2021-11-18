@@ -2,7 +2,7 @@
 title: "Pandasql"
 date: 2021-11-01T01:16:30-06:00
 draft: False
-tags: ['Python', 'pandasql', 'sql']
+tags: ['Python', 'Pandas','sql']
 description: Introducing pandasql
 ---
 
@@ -196,4 +196,4 @@ and we get exact the same results in the above:
     </tr>
   </tbody>
 </table>
-Much less code and more clear to read!
+Much less code and more clear to read! One thing to note is that when the we are dealing with large volume of data (can't be too large though if we are using Pandas), the performance of Pandasql is not very good.
