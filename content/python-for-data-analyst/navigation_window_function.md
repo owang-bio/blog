@@ -1,7 +1,7 @@
 ---
 title: "Navigation Window Function in Pandas and SQL"
 date: 2021-11-21T01:09:11-07:00
-draft: True
+draft: False
 tags: ['Python', 'pandas', 'window functions', 'sql']
 description: Window Functions in Pandas and SQL - Part 3. Navigation Function
 ---
