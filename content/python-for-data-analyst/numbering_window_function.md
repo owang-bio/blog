@@ -6,10 +6,12 @@ tags: ['Python', 'pandas', 'window functions', 'sql']
 description: Window Functions in Pandas and SQL - Part 2. Numbering Window Function
 ---
 
-This is not an introduction to window functions in Pandas or SQL. I will just use one example to compare implementing numbering window function in Pandas and SQL. In this example, I will just use Pandasql to demonstrate SQL instead of actually pulling data from a database. RANK(), DENSE_RANK(), and ROW_NUMBER() are the three most common numbering functions, and I will just use RANK() for this demonstration. 
+This is not an introduction to window functions in Pandas or SQL. I will just use one example to compare implementing numbering window function in Pandas and Pandasql (SQL). 
+
+RANK(), DENSE_RANK(), and ROW_NUMBER() are the three most common numbering functions in SQL, and I will just use RANK() for this demonstration. 
 
 We can start from the following DataFrame *product*:
-<table border="2" class="dataframe" style="width:60%">
+<table border="2" class="dataframe" style="width:80%">
   <thead>
     <tr style="text-align: right;">
       <th>Category</th>
@@ -74,19 +76,19 @@ q = """
         , rank() over(
             partition by Category
             order by Sales desc
-        ) as [Rank]
+        ) as [Sales_rank]
     from product
 """
 pysqldf(q)
 ```
 to get the result DataFrame with ranks:
-<table border="2" class="dataframe" style="width:60%">
+<table border="2" class="dataframe" style="width:80%">
   <thead>
     <tr style="text-align: right;">
       <th>Category</th>
       <th>Product_Name</th>
       <th>Sales</th>
-      <th>Rank</th>
+      <th>Sales_rank</th>
     </tr>
   </thead>
   <tbody>
@@ -158,5 +160,5 @@ product.join(
     , rsuffix='_rank'
 ).sort_values(by=['Category', 'Sales_rank'])
 ```
-The Pandas code is not bad at all. If you are trying to manipulate the Pandas DataFrame with numbering window functions, especially dataset with a couple of millions rows, I would recommend sticking with Pandas instead of Pandasql. I will leave DENSE_RANK(), and ROW_NUMBER() for you to try out. Also, try to explore the difference between RANK() and DENSE_RANK(). [Pandas's rank() function](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rank.html) takes a **method** argument which allows you to specify whether you want dense_rank(). Also, method='first' for Pandas's rank() is helpful if you want to assign row number to each row of a window. 
+The Pandas code is not bad at all. If you are trying to manipulate the Pandas DataFrame with numbering window functions, especially dataset with a couple of millions rows, I would recommend sticking with Pandas instead of Pandasql. I will leave DENSE_RANK(), and ROW_NUMBER() for you to try out. Also, try to explore the difference between RANK() and DENSE_RANK(). [Pandas's rank() function](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rank.html) takes a **method** argument which allows you to specify whether you want dense_rank(). And the method='first' for Pandas's rank() is helpful if you want to assign row number to each row of a window. 
 
