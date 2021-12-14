@@ -2,7 +2,7 @@
 title: "Time deltas and Date offsets in Pandas"
 date: 2021-10-12T23:06:19-06:00
 draft: False
-tags: ['python', 'datetime', 'pandas', 'timedelta']
+tags: ['python', 'datetime', 'pandas']
 description: Introduction to Pandas's Time deltas and Date offsets
 ---
 

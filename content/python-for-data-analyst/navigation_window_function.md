@@ -178,7 +178,7 @@ q = """
             partition by Category
             order by Sales desc
             rows between unbounded preceding and unbounded following
-        ) as Second_prod
+        ) as Last_prod
     from product
 """
 pysqldf(q)
@@ -197,7 +197,7 @@ product.join(
     , rsuffix='_r'
 ).rename(
     columns={
-        'Product_Name_r':'Second_prod'
+        'Product_Name_r':'Last_prod'
     }
 ).sort_values(by=['Category', 'Sales'], ascending=False)
 ```
@@ -208,7 +208,7 @@ will return the same results:
       <th>Category</th>
       <th>Product_Name</th>
       <th>Sales</th>
-      <th>Second_prod</th>
+      <th>Last_prod</th>
     </tr>
   </thead>
   <tbody>

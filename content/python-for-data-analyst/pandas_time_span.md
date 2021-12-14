@@ -2,7 +2,7 @@
 title: "Pandas Time Span"
 date: 2021-10-22T00:50:03-06:00
 draft: False
-tags: ['Python', 'pandas', 'datetime', 'period']
+tags: ['Python', 'pandas', 'datetime']
 description: Time span objects in Pandas
 ---
 
